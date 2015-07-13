@@ -19,10 +19,10 @@ print('================');
 print('Number of Spectra: ' + str(numSpec));
 lowMass = obj.GetLowMass();
 highMass = obj.GetHighMass();
-print('Mass Range: ' + str(lowMass) + '-' + str(lowMass));
+print('Mass Range: ' + str(lowMass) + '-' + str(highMass));
 
 pdrt = obj.RTFromScanNum(1);
-pdrt1 = obj.RTFromScanNum(100);
+pdrt1 = obj.RTFromScanNum(numSpec - 1);
 
 # The VARIANT type is very important!
 dummyVariant0 = variant(VT_UNKNOWN, 0);
